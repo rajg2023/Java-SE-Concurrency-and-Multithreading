@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class TestRunnable {
 
@@ -26,9 +28,15 @@ public class TestRunnable {
 			}
 					
 		};
+		//***********Runnable Instances*****************************************************************//
+		System.out.println("//***********Runnable Instances*****************************************************************//");
+		 Thread thread = new Thread(runnable);
+	     thread.start();
 		
-		Thread thread = new Thread(runnable);
-		thread.start();
+	     System.out.println("//***********Executor Services*****************************************************************//");
+	   //***********Executor Services*****************************************************************//
+		Executor executor = Executors.newSingleThreadExecutor();
+		executor.execute(runnable);
 		
 	}
 
