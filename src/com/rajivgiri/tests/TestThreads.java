@@ -11,10 +11,14 @@ public class TestThreads {
 		ApplicationThread thread2 = new ApplicationThread();
 		ApplicationThread thread3 = new ApplicationThread();
 		
+		
 		thread1.start();
 		thread2.start();
 		thread3.start();
 		
+		thread2.setPriority(1);
+		thread3.setPriority(5);
+		thread1.getState();
 	}
 
 }
