@@ -27,10 +27,10 @@ public class UserRunnable implements Callable<Integer>{
 		StringTokenizer tokenizer = new StringTokenizer(userRecord, ",");
 		User user = null;
 		while(tokenizer.hasMoreTokens()){
-			user = new User();
-			user.setId(Integer.valueOf(tokenizer.nextToken()));
+			user = new User();			
 			user.setEmail(tokenizer.nextToken());
 			user.setName(tokenizer.nextToken());
+			user.setId(Integer.valueOf(tokenizer.nextToken()));
 			rows = dao.saveUser(user);
 			
 			

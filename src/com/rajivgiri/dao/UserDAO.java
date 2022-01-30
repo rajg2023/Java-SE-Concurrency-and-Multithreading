@@ -14,7 +14,7 @@ public class UserDAO {
 		
 		Connection conn = DBConnection.getConnection();
 		try {
-			PreparedStatement statement = conn.prepareStatement("insert into USER value(?,?,?)");
+			PreparedStatement statement = conn.prepareStatement("INSERT INTO [dbo].[User]([ID],[name],[email]) VALUES ( ? ,  ? , ?)");
 			statement.setInt(1, user.getId());
 			statement.setString(2, user.getName());
 			statement.setString(3, user.getEmail());

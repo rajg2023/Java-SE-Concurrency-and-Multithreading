@@ -13,7 +13,7 @@ public class TestRunnable {
 		// TODO Auto-generated method stub
 
 		Runnable runnable =()->{
-			try(BufferedReader read = new BufferedReader(new FileReader("C:\\Users\\rgiri\\OneDrive\\Desktop\\Bootcamp\\Power punch 60 second elevator pitch and penut butter jelly sandwich.txt"))){
+			try(BufferedReader read = new BufferedReader(new FileReader("/JavaSEConcurrency/NewUsers.txt"))){
 				String line = null;
 				
 				while((line=read.readLine())!=null){
