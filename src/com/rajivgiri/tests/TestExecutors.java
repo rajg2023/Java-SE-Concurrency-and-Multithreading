@@ -25,7 +25,7 @@ public class TestExecutors {
 		
 		
 		ExecutorService service = Executors.newSingleThreadExecutor();
-		List<String> users = getUsersFromFile("C:\\Users\\rgiri\\Downloads\\Ex_Files_Java_EE_Concurrency\\Ex_Files_Java_EE_Concurrency\\Exercise Files\\Chapter3\\03_04\\begin\\new_users.txt");
+		List<String> users = getUsersFromFile("/JavaSEConcurrency/NewUsers.txt");
 		UserDAO dao = new UserDAO();
 		for(String user:users) {
 			Future<Integer>future= service.submit(new UserRunnable(user, dao));
@@ -38,14 +38,14 @@ public class TestExecutors {
 		}
 		service.shutdown();
 		System.out.println("Main execution Over!!");
-		System.out.println(new java.io.File("src/NewUsers.txt").getAbsolutePath());
+		//System.out.println(new java.io.File("src/NewUsers.txt").getAbsolutePath());
 		
 
 	}
 	
 	public static List<String> getUsersFromFile(String fileName) {
 		List<String>users=new ArrayList<>();
-		try(BufferedReader read = new BufferedReader(new FileReader(new File("fileName")))){
+		try(BufferedReader read = new BufferedReader(new FileReader(new File(fileName)))){
 			String line = null;
 			
 			while((line=read.readLine())!=null){
