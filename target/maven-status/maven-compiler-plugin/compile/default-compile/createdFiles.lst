@@ -1,1 +1,5 @@
+com\rajivgiri\beans\User.class
+com\rajivgiri\dao\UserDAO.class
+com\rajivgiri\dao\DBConnection.class
+com\rajivgiri\runnables\UserRunnable.class
 com\rajivgiri\tests\FirstTest.class
