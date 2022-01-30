@@ -18,7 +18,7 @@ public class DBConnection {
 			e1.printStackTrace();
 		}
 		try {
-			conn = DriverManager.getConnection("jdbc:sqlserver://RAJ-WORK;databaseName=Java-SE-Concurrency-and-Multithreading-DB;user=root;password=root");
+			conn = DriverManager.getConnection("jdbc:sqlserver://SERVERNAME;databaseName=YOURDBNAMEHERE;user=USERNAME;password=PASSWORD");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
