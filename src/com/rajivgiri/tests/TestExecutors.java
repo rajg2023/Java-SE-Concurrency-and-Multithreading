@@ -23,7 +23,7 @@ public class TestExecutors {
 	public static void main(String[] args) {
 		
 		
-		ExecutorService service = Executors.newFixedThreadPool(4);
+		ExecutorService service = Executors.newFixedThreadPool(3);
 		List<String> users = getUsersFromFile("/JavaSEConcurrency/NewUsers.txt");
 		UserDAO dao = new UserDAO();
 		for(String user:users) {

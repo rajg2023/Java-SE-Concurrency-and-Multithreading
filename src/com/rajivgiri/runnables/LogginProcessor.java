@@ -9,6 +9,7 @@ public class LogginProcessor implements Callable<Boolean>{
 	@Override
 	public Boolean call() throws Exception {
 		// TODO Auto-generated method stub
+		System.out.println("Thread Name : "+ Thread.currentThread().getName());
 		Logger.getLogger(LogginProcessor.class.getName()).log(Level.INFO,"Logging something");
 		return true;
 	}
