@@ -23,7 +23,7 @@ public class TestExecutors {
 	public static void main(String[] args) {
 		
 		
-		ExecutorService service = Executors.newSingleThreadExecutor();
+		ExecutorService service = Executors.newFixedThreadPool(4);
 		List<String> users = getUsersFromFile("/JavaSEConcurrency/NewUsers.txt");
 		UserDAO dao = new UserDAO();
 		for(String user:users) {
@@ -35,6 +35,7 @@ public class TestExecutors {
 				e.printStackTrace();
 			}
 		}
+		
 		service.shutdown();
 		System.out.println("Main execution Over!!");
 		//System.out.println(new java.io.File("src/NewUsers.txt").getAbsolutePath());
