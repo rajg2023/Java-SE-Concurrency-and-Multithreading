@@ -3,6 +3,7 @@ package com.rajivgiri.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import com.microsoft.sqlserver.jdbc.*;
 
 public class DBConnection {
 
@@ -11,7 +12,7 @@ public class DBConnection {
 		Connection conn = null;
 		
 		try {
-			Class.forName("com.microsoft.sqlserver");
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
