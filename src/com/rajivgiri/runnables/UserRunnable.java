@@ -11,7 +11,7 @@ public class UserRunnable implements Callable<Integer>{
 	private String userRecord;
 	private UserDAO dao;
 	
-	public UserRunnable(String user, UserDAO dao) {
+	public UserRunnable(String userRecord, UserDAO dao) {
 		// TODO Auto-generated constructor stub
 	
 		this.userRecord=userRecord;
