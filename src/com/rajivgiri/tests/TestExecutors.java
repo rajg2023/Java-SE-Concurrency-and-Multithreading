@@ -21,7 +21,6 @@ import com.rajivgiri.runnables.UserRunnable;
 public class TestExecutors {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		
 		ExecutorService service = Executors.newSingleThreadExecutor();
